@@ -23,6 +23,9 @@ $(document).ready(function() {
             showError('Invalid album ID in url.');
             return;
         }
+        var el = document.getElementById('image-sorter');
+        var sortable = Sortable.create(el);
+        return;
         $.ajax({
                 dataType: "json",
                 url: 'https://api.imgur.com/3/album/' + albumId,

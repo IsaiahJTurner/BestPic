@@ -17,6 +17,9 @@ input, textarea {
 h1, h2, h3 {
   line-height:1.2
 }
+h1 a {
+  color: inherit;
+}
 * {
   outline: none;
 }
@@ -41,4 +44,38 @@ label {
   right: 0;
   top: 0;
   margin-bottom: 10px;
+}
+.image-sorter {
+  list-style: none;
+  padding: 5px;
+  width: 375px;
+  border: 1px solid #bbb;
+  border-radius: 1px;
+  margin: auto;
+}
+.image-sorter li {
+  cursor: move;
+  padding: 5px 0;
+}
+.image-sorter li:first-of-type:not(.line) {
+  background: #3498db;
+  padding-top: 10px;
+}
+.image-sorter li:first-of-type:not(.line):before {
+  content: "Main Profile Pic";
+  display: block;
+  color: white;
+  text-align: center;
+  padding-bottom: 5px;
+}
+.image-sorter li.line {
+  text-align: center;
+  background: black;
+  color: white;
+}
+.image-sorter li .image {
+  margin: auto;
+  width: 240px;
+  height: 240px;
+  border-radius: 3px;
 }

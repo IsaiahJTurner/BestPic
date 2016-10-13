@@ -9,7 +9,6 @@
   <meta name="author" content="@IsaiahJTurner">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="image-picker.css?v=1.0">
   <link rel="stylesheet" href="styles.css?v=1.0">
 
   <!--[if lt IE 9]>
@@ -28,16 +27,41 @@
 
   </div>
   <div class="page" id="responder">
-    <div class="image-selector">
-      <img src="http://www.citizenbrooklyn.com/wp-content/uploads/2013/03/purposeofenvy_0002.jpg" />
-      <img src="https://www.nycgovparks.org/photo_gallery/full_size/14413.jpg" />
+    <header>
+      <h1><a href="./index.html">BestPic</a> Dating Profile Feedback Collector</h1>
+      <p>
+        Use this form to design the best possible dating profile for a person in need.
+      </p>
+    </header>
+    <h3>Image Prioritization</h3>
+    <ul>
+      <li>
+        Sort photos <strong>how they should appear on the profile</strong> (not necessarily best to worst).
+      </li>
+      <li>
+        The photo at the top of the list is the main pic.
+      </li>
+      <li>
+        Move the delete line to indicate photos that should not be included on the profile.
+      </li>
+    </p>
+    <ul id="image-sorter" class="image-sorter">
+      <li>
+        <div class="image" style="background-image: url('http://www.citizenbrooklyn.com/wp-content/uploads/2013/03/purposeofenvy_0002.jpg')"></div>
+      </li>
+      <li class="line" id="delete-line">
+        <strong>Delete Line:</strong> Move Bad Photos Below This Line
+      </li>
+      <li>
+        <div class="image" style="background-image: url('https://www.nycgovparks.org/photo_gallery/full_size/14413.jpg')"></div>
+      </li>
     </div>
   </div>
   <div class="page" id="link-creator">
     <header>
       <h1>BestPic Dating Profile Feedback Collector</h1>
       <aside>
-        This tool will generate a link so you can receive feedback on your internet dating profile. An example of the end result can be found <a href="https://google.com" target="_blank">here</a>. BestPic is entirely <a href="https://github.com/IsaiahJTurner/BestPics" target="_blank">open source</a>.
+        This tool will generate a link so you can receive feedback on your internet dating profile. An example of the end result can be found <a href="https://google.com" target="_blank">here</a>. BestPic is entirely <a href="https://github.com/IsaiahJTurner/BestPics" target="_blank">open source</a> and inspired by the subreddit <a href="https://reddit.com/r/tinder" target="_blank">/r/tinder</a>.
       </aside>
     </header>
     <h2>Profile Options</h2>
@@ -118,7 +142,7 @@
   <div id="error" class="error"></div>
   <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-  <script src="image-picker.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.4.2/Sortable.min.js"></script>
   <script src="scripts.js"></script>
 </body>
 </html>
