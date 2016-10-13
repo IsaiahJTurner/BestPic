@@ -45,6 +45,9 @@ label {
   top: 0;
   margin-bottom: 10px;
 }
+.credits a {
+  color: inherit;
+}
 .image-sorter {
   list-style: none;
   padding: 5px;
