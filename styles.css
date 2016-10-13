@@ -86,3 +86,9 @@ label {
   height: 240px;
   border-radius: 3px;
 }
+.follow-button {
+  height: 20px;
+}
+.contents {
+  min-height: 100vh;
+}

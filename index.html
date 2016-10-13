@@ -21,160 +21,169 @@
     <p>
       BestPic is built by one person, me. It's entirely free and all I ask is that if you use it, follow me on <a href="https://twitter.com/IsaiahJTurner" target="_blank">Twitter</a> or <a href="https://instagram.com/IsaiahJTurner" target="_blank">Instagram</a>.
     </p>
-    <a href="https://twitter.com/IsaiahJTurner" class="twitter-follow-button" data-show-count="false">Follow @IsaiahJTurner</a>
+    <div class="follow-button">
+      <a href="https://twitter.com/IsaiahJTurner" class="twitter-follow-button" data-show-count="false">Follow @IsaiahJTurner</a>
+    </div>
   </div>
-  <div class="hidden-default" id="response">
-
-  </div>
-  <div class="hidden-default" id="responder">
-    <header>
-      <h1><a href="./index.html">BestPic</a> Dating Profile Feedback Collector</h1>
-      <p>
-        Use this form to design the best possible dating profile for a person in need.
-      </p>
-    </header>
-    <form id="responder-form">
-      <h3>Image Prioritization</h3>
-      <ul>
-        <li>
-          Sort photos <strong>how they should appear on the profile</strong> (not necessarily best to worst).
-        </li>
-        <li>
-          The photo at the top of the list is the main pic.
-        </li>
-        <li>
-          Move the delete line to indicate photos that should not be included on the profile.
-        </li>
-      </ul>
-      <ul id="image-sorter" class="image-sorter">
-        <li>
-          <div class="image" style="background-image: url('http://www.citizenbrooklyn.com/wp-content/uploads/2013/03/purposeofenvy_0002.jpg')"></div>
-        </li>
-        <li class="line" id="delete-line">
-          <strong>Delete Line:</strong> Move Bad Photos Below This Line
-        </li>
-        <li>
-          <div class="image" style="background-image: url('https://www.nycgovparks.org/photo_gallery/full_size/14413.jpg')"></div>
-        </li>
-      </ul>
-      <h3>Image Comments</h3>
-      <label for="image-comments"><em>Optional</em></label>
-      <textarea id="image-comments" name="c" rows="3" cols="40" placeholder="Use a photo with a dog for your main pic."></textarea>
-      <div id="bio-feedback" class="hidden-default">
-        <h3>Bio Customization</h3>
+  <div class="contents">
+    <div class="hidden-default" id="response">
+      <header>
+        <h1><a href="./index.html">BestPic</a> Dating Profile Feedback</h1>
+        <p>
+          This is the best I could do.
+        </p>
+      </header>
+    </div>
+    <div class="hidden-default" id="responder">
+      <header>
+        <h1><a href="./index.html">BestPic</a> Dating Profile Feedback Collector</h1>
+        <p>
+          Use this form to design the best possible dating profile for a person in need.
+        </p>
+      </header>
+      <form id="responder-form">
+        <h3>Image Prioritization</h3>
         <ul>
           <li>
-            Copy and paste on any of the bio options below to use them.
+            Sort photos <strong>how they should appear on the profile</strong> (not necessarily best to worst).
           </li>
           <li>
-            Edit and tweak bio if needed.
+            The photo at the top of the list is the main pic.
           </li>
           <li>
-            Lazy? Just type the number of the bio that's the best in the box.
+            Move the delete line to indicate photos that should not be included on the profile.
           </li>
         </ul>
-        <div class="bio-options">
-          <ol>
+        <ul id="image-sorter" class="image-sorter">
+          <li>
+            <div class="image" style="background-image: url('http://www.citizenbrooklyn.com/wp-content/uploads/2013/03/purposeofenvy_0002.jpg')"></div>
+          </li>
+          <li class="line" id="delete-line">
+            <strong>Delete Line:</strong> Move Bad Photos Below This Line
+          </li>
+          <li>
+            <div class="image" style="background-image: url('https://www.nycgovparks.org/photo_gallery/full_size/14413.jpg')"></div>
+          </li>
+        </ul>
+        <h3>Image Comments</h3>
+        <label for="image-comments"><em>Optional</em></label>
+        <textarea id="image-comments" name="c" rows="3" cols="40" placeholder="Use a photo with a dog for your main pic."></textarea>
+        <div id="bio-feedback" class="hidden-default">
+          <h3>Bio Customization</h3>
+          <ul>
             <li>
-              What the heck did you just freaking say about me, you stranger? I’ll have you know I graduated top of my class in the Navy Seals, and I’ve been involved in numerous secret raids on Al-Quaeda, and I have over 300 confirmed hugs. I am trained in gorilla.
+              Copy and paste on any of the bio options below to use them.
             </li>
             <li>
-              I'll treat you like Kanye treats Kanye.
+              Edit and tweak bio if needed.
             </li>
-          </ol>
+            <li>
+              Lazy? Just type the number of the bio that's the best in the box.
+            </li>
+          </ul>
+          <div class="bio-options">
+            <ol>
+              <li>
+                What the heck did you just freaking say about me, you stranger? I’ll have you know I graduated top of my class in the Navy Seals, and I’ve been involved in numerous secret raids on Al-Quaeda, and I have over 300 confirmed hugs. I am trained in gorilla.
+              </li>
+              <li>
+                I'll treat you like Kanye treats Kanye.
+              </li>
+            </ol>
+          </div>
+          <label for="bio"><em>Optional</em></label>
+          <textarea id="bio" rows="3" cols="40" placeholder="I'll treat you like Kanye treats Kanye."></textarea>
         </div>
-        <label for="bio"><em>Optional</em></label>
-        <textarea id="bio" rows="3" cols="40" placeholder="I'll treat you like Kanye treats Kanye."></textarea>
-      </div>
-      <h2>Share Feedback</h2>
+        <h2>Share Feedback</h2>
+        <p>
+          When you are ready to share your feedback, click submit below. <strong>You must copy the generated feedback link and send/post it where needed.</strong> Your feedback will not be received unless you share the link.
+        </p>
+        <button type="submit">Generate Feedback Link</button>
+      </form>
       <p>
-        When you are ready to share your feedback, click submit below. <strong>You must copy the generated feedback link and send/post it where needed.</strong> Your feedback will not be received unless you share the link.
+        <em>None of the information you enter into this form can be found online</em> until <strong>you</strong> share the link.</em>
       </p>
-      <button type="submit">Generate Feedback Link</button>
-    </form>
-    <p>
-      <em>None of the information you enter into this form can be found online</em> until <strong>you</strong> share the link.</em>
-    </p>
-  </div>
-  <div class="hidden-default" id="link-creator">
-    <header>
-      <h1>BestPic Dating Profile Feedback Collector</h1>
-      <aside>
-        This tool will generate a link so you can receive feedback on your internet dating profile. An example of the end result can be found <a href="https://google.com" target="_blank">here</a>. BestPic is entirely <a href="https://github.com/IsaiahJTurner/BestPics" target="_blank">open source</a> and inspired by the subreddit <a href="https://reddit.com/r/tinder" target="_blank">/r/tinder</a>.
-      </aside>
-    </header>
-    <h2>Profile Options</h2>
-    <p>
-      This form will collect all the information needed to create and give feedback on your profile photos and bio.
-    </p>
-    <form id="link-creator-form">
-      <h3>Album URL</h3>
-      <ul>
-        <li>
-          All photos must be uploaded directly to an <a href="https://imgur.com/signin" target="_blank">Imgur Album</a>.
-        </li>
-        <li>
-          <em>Do not upload new photos, delete photos, or edit the album</em> once you click submit.
-        </li>
-        <li>
-          Photos <strong>must be in an album</strong>. You can't use a link directly to a photo on Imgur.
-        </li>
-        <li>
-          Responders will can choose in order up to five photos and share new photo ideas.
-        </li>
-      </ul>
-      <!-- album uses a for album -->
-      <label for="url">Required</label>
-      <input id="url" type="url" name="a" placeholder="http://imgur.com/a/ZZZZZZ" value="http://imgur.com/a/iN3OU" required="required"/>
-      <h3>Bios</h3>
-      <ul>
-        <li>
-          Empty inputs will be ignored.
-        </li>
-        <li>
-          Some dating apps limit bios to 500 characters.
-        </li>
-        <li>
-          Responders can only suggest one bio but may edit based on other options.
-        </li>
-      </ul>
-      <label for="bio-w"><em>All Optional</em></label>
-      <!-- bios use end of alphabet w, x, y, z -->
-      <textarea id="bio-w" name="w" rows="6" cols="35" placeholder="I'll treat you like Kanye treats Kanye.">I'll treat you like Kanye treats Kanye.</textarea>
-      <textarea name="x" rows="6" cols="35" placeholder="I love music and food
-  Let's go on an adventure
-  I only swiped for your dog
-  Must be at least 6 foot
-  If I super liked you it was by accident"></textarea>
-      <textarea name="y" rows="6" cols="35" placeholder="What the heck did you just freaking say about me, you stranger? I’ll have you know I graduated top of my class in the Navy Seals, and I’ve been involved in numerous secret raids on Al-Quaeda, and I have over 300 confirmed hugs. I am trained in gorilla"></textarea>
-      <textarea name="z" rows="6" cols="35" placeholder="high functioning autist">high functioning autist</textarea>
-      <h3>Instagram</h3>
-      <ul>
-        <li>
-          Responders can answer yes or no on if you should link your <a href="https://instagram.com" target="_blank">Instagram</a>.
-        </li>
-        <li>
-          Responders can write a short answer with more information.
-        </li>
-        <li>
-          You should consider your privacy before requesting feedback on your Instagram.
-        </li>
-      </ul>
-      <label for="instagram-url"><em>Optional</em></label>
-      <!-- instagram uses i for instagram -->
-      <input type="text" id="instagram-url" name="i" placeholder="IsaiahJTurner" value="IsaiahJTurner"/>
-      <h2>Create Link</h2>
+    </div>
+    <div class="hidden-default" id="link-creator">
+      <header>
+        <h1>BestPic Dating Profile Feedback Collector</h1>
+        <aside>
+          This tool will generate a link so you can receive feedback on your internet dating profile. An example of the end result can be found <a href="https://google.com" target="_blank">here</a>. BestPic is entirely <a href="https://github.com/IsaiahJTurner/BestPics" target="_blank">open source</a> and inspired by the subreddit <a href="https://reddit.com/r/tinder" target="_blank">/r/tinder</a>.
+        </aside>
+      </header>
+      <h2>Profile Options</h2>
       <p>
-        This will generate a unique link. Make sure to copy it before you leave the page.
-        It is also important to note that
-        <strong>you can not edit anything once you click create.</strong>
-        You will have to come back, enter each field again, and create a new link.
+        This form will collect all the information needed to create and give feedback on your profile photos and bio.
       </p>
-      <button type="submit">Create</button>
-    </form>
-    <p>
-      <em>None of the information you enter into this form can be found online</em> until <strong>you</strong> share the link.</em>
-    </p>
+      <form id="link-creator-form">
+        <h3>Album URL</h3>
+        <ul>
+          <li>
+            All photos must be uploaded directly to an <a href="https://imgur.com/signin" target="_blank">Imgur Album</a>.
+          </li>
+          <li>
+            <em>Do not upload new photos, delete photos, or edit the album</em> once you click submit.
+          </li>
+          <li>
+            Photos <strong>must be in an album</strong>. You can't use a link directly to a photo on Imgur.
+          </li>
+          <li>
+            Responders will can choose in order up to five photos and share new photo ideas.
+          </li>
+        </ul>
+        <!-- album uses a for album -->
+        <label for="url">Required</label>
+        <input id="url" type="url" name="a" placeholder="http://imgur.com/a/ZZZZZZ" value="http://imgur.com/a/iN3OU" required="required"/>
+        <h3>Bios</h3>
+        <ul>
+          <li>
+            Empty inputs will be ignored.
+          </li>
+          <li>
+            Some dating apps limit bios to 500 characters.
+          </li>
+          <li>
+            Responders can only suggest one bio but may edit based on other options.
+          </li>
+        </ul>
+        <label for="bio-w"><em>All Optional</em></label>
+        <!-- bios use end of alphabet w, x, y, z -->
+        <textarea id="bio-w" name="w" rows="6" cols="35" placeholder="I'll treat you like Kanye treats Kanye.">I'll treat you like Kanye treats Kanye.</textarea>
+        <textarea name="x" rows="6" cols="35" placeholder="I love music and food
+    Let's go on an adventure
+    I only swiped for your dog
+    Must be at least 6 foot
+    If I super liked you it was by accident"></textarea>
+        <textarea name="y" rows="6" cols="35" placeholder="What the heck did you just freaking say about me, you stranger? I’ll have you know I graduated top of my class in the Navy Seals, and I’ve been involved in numerous secret raids on Al-Quaeda, and I have over 300 confirmed hugs. I am trained in gorilla"></textarea>
+        <textarea name="z" rows="6" cols="35" placeholder="high functioning autist">high functioning autist</textarea>
+        <h3>Instagram</h3>
+        <ul>
+          <li>
+            Responders can answer yes or no on if you should link your <a href="https://instagram.com" target="_blank">Instagram</a>.
+          </li>
+          <li>
+            Responders can write a short answer with more information.
+          </li>
+          <li>
+            You should consider your privacy before requesting feedback on your Instagram.
+          </li>
+        </ul>
+        <label for="instagram-url"><em>Optional</em></label>
+        <!-- instagram uses i for instagram -->
+        <input type="text" id="instagram-url" name="i" placeholder="IsaiahJTurner" value="IsaiahJTurner"/>
+        <h2>Create Link</h2>
+        <p>
+          This will generate a unique link. Make sure to copy it before you leave the page.
+          It is also important to note that
+          <strong>you can not edit anything once you click create.</strong>
+          You will have to come back, enter each field again, and create a new link.
+        </p>
+        <button type="submit">Create</button>
+      </form>
+      <p>
+        <em>None of the information you enter into this form can be found online</em> until <strong>you</strong> share the link.</em>
+      </p>
+    </div>
   </div>
   <footer>
     Copyright &copy; 2016 Isaiah Turner. All rights reserved.

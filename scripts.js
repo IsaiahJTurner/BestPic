@@ -16,6 +16,8 @@ function showError(message) {
 }
 
 $(document).ready(function() {
+    var imageComments = getQueryVariable('c');
+    var imageOrder = getQueryVariable('i');
     var albumId = getQueryVariable('a');
     var bios = [];
     ['w', 'x', 'y', 'z'].forEach(function(bioName) {
@@ -24,7 +26,7 @@ $(document).ready(function() {
             bios.push(bio);
         }
     });
-    console.log(bios);
+
     if (bios.length !== 0) {
         $('#bio-feedback').toggle(true);
     }
@@ -48,6 +50,8 @@ $(document).ready(function() {
             .then(function(album) {
                 console.log(album);
             })
+    } else if (imageComments || imageComments === "") {
+        $('#response').toggle(true);
     } else {
         $('#link-creator').toggle(true);
     }
