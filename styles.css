@@ -1,0 +1,44 @@
+input {
+  width: 200px;
+}
+body {
+  margin: 40px auto;
+  max-width: 650px;
+  line-height: 1.6;
+  font-size: 18px;
+  color: #444;
+  padding:0 10px
+}
+input, textarea {
+  border: 1px solid #bbb;
+  border-radius: 1px;
+  padding: 4px 5px;
+}
+h1, h2, h3 {
+  line-height:1.2
+}
+* {
+  outline: none;
+}
+textarea {
+  resize: none;
+}
+label {
+  display: block;
+}
+.error {
+  color: red;
+}
+.page {
+  display: none;
+}
+.credits {
+  margin: auto;
+  text-align: center;
+  width: 100%;
+  max-width: 320px;
+  background: white;
+  right: 0;
+  top: 0;
+  margin-bottom: 10px;
+}

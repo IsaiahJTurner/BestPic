@@ -1,0 +1,124 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>BestPics</title>
+  <meta name="description" content="A tool to help you create the best dating app profile.">
+  <meta name="author" content="@IsaiahJTurner">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="image-picker.css?v=1.0">
+  <link rel="stylesheet" href="styles.css?v=1.0">
+
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+  <div class="credits">
+    <p>
+      BestPic is built by one person, me. It's entirely free and all I ask is that if you use it, follow me on Twitter.
+    </p>
+    <a href="https://twitter.com/IsaiahJTurner" class="twitter-follow-button" data-show-count="false">Follow @IsaiahJTurner</a>
+  </div>
+  <div class="page" id="response">
+
+  </div>
+  <div class="page" id="responder">
+    <div class="image-selector">
+      <img src="http://www.citizenbrooklyn.com/wp-content/uploads/2013/03/purposeofenvy_0002.jpg" />
+      <img src="https://www.nycgovparks.org/photo_gallery/full_size/14413.jpg" />
+    </div>
+  </div>
+  <div class="page" id="link-creator">
+    <header>
+      <h1>BestPic Dating Profile Feedback Collector</h1>
+      <aside>
+        This tool will generate a link so you can receive feedback on your internet dating profile. An example of the end result can be found <a href="https://google.com" target="_blank">here</a>. BestPic is entirely <a href="https://github.com/IsaiahJTurner/BestPics" target="_blank">open source</a>.
+      </aside>
+    </header>
+    <h2>Profile Options</h2>
+    <p>
+      This form will collect all the information needed to create and give feedback on your profile photos and bio.
+    </p>
+    <form id="form">
+      <h3>Album URL</h3>
+      <ul>
+        <li>
+          All photos must be uploaded directly to an <a href="https://imgur.com/signin" target="_blank">Imgur Album</a>.
+        </li>
+        <li>
+          <em>Do not upload new photos, delete photos, or edit the album</em> once you click submit.
+        </li>
+        <li>
+          Photos <strong>must be in an album</strong>. You can't use a link directly to a photo on Imgur.
+        </li>
+        <li>
+          Responders will can choose in order up to five photos and share new photo ideas.
+        </li>
+      </ul>
+      <!-- album uses a for album -->
+      <input type="url" name="a" placeholder="http://imgur.com/a/ZZZZZZ" value="http://imgur.com/a/iN3OU" required="required"/>
+      <h3>Bios</h3>
+      <ul>
+        <li>
+          Empty inputs will be ignored.
+        </li>
+        <li>
+          Some dating apps limit bios to 500 characters.
+        </li>
+        <li>
+          Responders can only suggest one bio but may edit based on other options.
+        </li>
+      </ul>
+      <label><em>All Optional</em></label>
+      <!-- bios use end of alphabet w, x, y, z -->
+      <textarea name="w" rows="6" cols="35" placeholder="I'll treat you like Kanye treats Kanye.">I'll treat you like Kanye treats Kanye.</textarea>
+      <textarea name="x" rows="6" cols="35" placeholder="I love music and food
+  Let's go on an adventure
+  I only swiped for your dog
+  Must be at least 6 foot
+  If I super liked you it was by accident"></textarea>
+      <textarea name="y" rows="6" cols="35" placeholder="What the heck did you just freaking say about me, you stranger? I’ll have you know I graduated top of my class in the Navy Seals, and I’ve been involved in numerous secret raids on Al-Quaeda, and I have over 300 confirmed hugs. I am trained in gorilla"></textarea>
+      <textarea name="z" rows="6" cols="35" placeholder="high functioning autist">high functioning autist</textarea>
+      <h3>Instagram</h3>
+      <ul>
+        <li>
+          Responders can answer yes or no on if you should link your <a href="https://instagram.com" target="_blank">Instagram</a>.
+        </li>
+        <li>
+          Responders can write a short answer with more information.
+        </li>
+        <li>
+          You should consider your privacy before requesting feedback on your Instagram.
+        </li>
+      </ul>
+      <label for="instagram-url"><em>Optional</em></label>
+      <!-- instagram uses i for instagram -->
+      <input type="text" name="i" placeholder="IsaiahJTurner" value="IsaiahJTurner"/>
+      <h2>Create Link</h2>
+      <p>
+        This will generate a unique link. Make sure to copy it before you leave the page.
+        It is also important to note that
+        <strong>you can not edit anything once you click create.</strong>
+        You will have to come back, enter each field again, and create a new link.
+      </p>
+      <button type="submit">Create</button>
+    </form>
+    <p>
+      <em>None of the information you enter into this form can be found online</em> until <strong>you</strong> share the link.</em>
+    </p>
+  </div>
+  <footer>
+    Copyright &copy; 2016 Isaiah Turner. All rights reserved.
+  </footer>
+  <div id="error" class="error"></div>
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="image-picker.js"></script>
+  <script src="scripts.js"></script>
+</body>
+</html>
