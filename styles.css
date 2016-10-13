@@ -32,7 +32,7 @@ label {
 .error {
   color: red;
 }
-.page {
+.hidden-default {
   display: none;
 }
 .credits {
@@ -48,10 +48,9 @@ label {
 .image-sorter {
   list-style: none;
   padding: 5px;
-  width: 375px;
+  max-width: 375px;
   border: 1px solid #bbb;
   border-radius: 1px;
-  margin: auto;
 }
 .image-sorter li {
   cursor: move;
@@ -60,6 +59,7 @@ label {
 .image-sorter li:first-of-type:not(.line) {
   background: #3498db;
   padding-top: 10px;
+  padding-bottom: 10px;
 }
 .image-sorter li:first-of-type:not(.line):before {
   content: "Main Profile Pic";
@@ -73,6 +73,10 @@ label {
   background: black;
   color: white;
 }
+.image-sorter li.line + li {
+  padding-top: 10px;
+}
+
 .image-sorter li .image {
   margin: auto;
   width: 240px;

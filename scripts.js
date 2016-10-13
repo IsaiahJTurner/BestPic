@@ -17,6 +17,18 @@ function showError(message) {
 
 $(document).ready(function() {
     var albumId = getQueryVariable('a');
+    var bios = [];
+    ['w', 'x', 'y', 'z'].forEach(function(bioName) {
+        var bio = getQueryVariable(bioName);
+        if (bio) {
+            bios.push(bio);
+        }
+    });
+    console.log(bios);
+    if (bios.length !== 0) {
+        $('#bio-feedback').toggle(true);
+    }
+
     if (albumId) {
         $('#responder').toggle(true);
         if (albumId.length > 10) {
@@ -42,7 +54,7 @@ $(document).ready(function() {
 });
 
 
-$('#form').submit(function(e) {
+$('#link-creator-form').submit(function(e) {
     e.preventDefault();
     var urlPrefix = document.location.origin + document.location.pathname + '?'
     if (document.location.protocol !== 'file:') {
