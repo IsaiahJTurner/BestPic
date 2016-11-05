@@ -112,7 +112,7 @@ $('#responder-form').submit(function(e) {
             bio = $li.text();
         }
     }
-    url += '&b=' + bio;
+    url += '&b=' + encodeURIComponent(bio);
     url += '&i=' + imageIds;
     if (imageIds.split(',').length > 6) {
         showError('Profiles can only have up to six photos, move some below the black line.');
