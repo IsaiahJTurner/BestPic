@@ -112,7 +112,7 @@ $('#responder-form').submit(function(e) {
         showError('Due to a browser limitation, you must shorten your bio.\nCurrent Length: ' + urlLength + '\nMax Length: 2000');
         return;
     }
-    console.log(url)
+    document.location = url;
 })
 
 $('#link-creator-form').submit(function(e) {
