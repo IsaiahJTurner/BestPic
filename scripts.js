@@ -104,6 +104,10 @@ $('#responder-form').submit(function(e) {
         }
     })
     url += '&i=' + imageIds;
+    if (imageIds.split(',').length > 6) {
+        showError('Profiles can only have up to six photos, move some below the black line.');
+        return;
+    }
     if (url.length > 2000) {
         showError('Due to a browser limitation, you must shorten your bio.\nCurrent Length: ' + urlLength + '\nMax Length: 2000');
         return;
