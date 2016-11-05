@@ -68,6 +68,7 @@ $(document).ready(function() {
             $('#option-' + (i + 1)).css('background-image', "url('http://i.imgur.com/" + imageId + ".png')");
         }
         $('#comments').text(imageComments);
+        $('#bio-view').text(getQueryVariable('b'));
     } else {
         $('#link-creator').toggle(true);
     }
