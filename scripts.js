@@ -65,9 +65,9 @@ $(document).ready(function() {
         var imageIds = imageOrder.split(',');
         for (var i = 0; i < imageIds.length; i++) {
             var imageId = imageIds[i];
-            $('#option-' + (i + 1)).css('background-image', "url('http://i.imgur.com/" + imageId + ".png')")
+            $('#option-' + (i + 1)).css('background-image', "url('http://i.imgur.com/" + imageId + ".png')");
         }
-        console.log(imageIds);
+        $('#comments').text(imageComments);
     } else {
         $('#link-creator').toggle(true);
     }
