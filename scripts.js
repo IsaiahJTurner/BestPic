@@ -14,13 +14,13 @@ function showError(message) {
     // alert(message)
     $('#error').html(message.replace(/\n/g, '<br>'));
 }
-
+var bioMapper = ['w', 'x', 'y', 'z'];
 $(document).ready(function() {
     var imageComments = getQueryVariable('c');
     var imageOrder = getQueryVariable('i');
     var albumId = getQueryVariable('a');
     var bios = [];
-    ['w', 'x', 'y', 'z'].forEach(function(bioName) {
+    bioMapper.forEach(function(bioName) {
         var bio = getQueryVariable(bioName);
         if (bio) {
             bios.push(bio);
@@ -32,7 +32,7 @@ $(document).ready(function() {
         var $bioOptions = $('#bio-options')
         for (var i = 0; i < bios.length; i++) {
             var bio = bios[i]
-            $bioOptions.append('<li>' + bio + '</li>')
+            $bioOptions.append('<li>' + bio.replace(/(?:\r\n|\r|\n)/g, '<br />') + '</li>')
         }
     }
 
@@ -103,6 +103,16 @@ $('#responder-form').submit(function(e) {
             }
         }
     })
+    var bio = $('#bio').val()
+    var bioNumber = parseInt(bio, 10)
+    if (bioNumber > 0) {
+        var $lis = $('#bio-options').children('li')
+        var $li = $($lis[bioNumber - 1])
+        if ($li) {
+            bio = $li.text();
+        }
+    }
+    url += '&b=' + bio;
     url += '&i=' + imageIds;
     if (imageIds.split(',').length > 6) {
         showError('Profiles can only have up to six photos, move some below the black line.');
