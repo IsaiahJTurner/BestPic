@@ -29,9 +29,14 @@ $(document).ready(function() {
 
     if (bios.length !== 0) {
         $('#bio-feedback').toggle(true);
+        var $bioOptions = $('#bio-options')
+        for (var i = 0; i < bios.length; i++) {
+            var bio = bios[i]
+            $bioOptions.append('<li>' + bio + '</li>')
+        }
     }
 
-    if (albumId) {
+    if (albumId && !imageOrder) {
         $('#responder').toggle(true);
         if (albumId.length > 10) {
             showError('Invalid album ID in url.');
@@ -39,7 +44,8 @@ $(document).ready(function() {
         }
         var el = document.getElementById('image-sorter');
         var sortable = Sortable.create(el);
-        return;
+        var albumId = getQueryVariable('a');
+
         $.ajax({
                 dataType: "json",
                 url: 'https://api.imgur.com/3/album/' + albumId,
@@ -48,15 +54,61 @@ $(document).ready(function() {
                 }
             })
             .then(function(album) {
-                console.log(album);
+                var images = album["data"]["images"]
+                for (var i = 0; i < images.length; i++) {
+                    var image = images[i]
+                    $('#image-sorter').append('<li><div class="image" data-id=' + image['id'] + ' style="background-image: url(\'' + image['link'] + '\')"></div></li>')
+                }
             })
-    } else if (imageComments || imageComments === "") {
+    } else if (imageOrder) {
         $('#response').toggle(true);
+        var imageIds = imageOrder.split(',');
+        for (var i = 0; i < imageIds.length; i++) {
+            var imageId = imageIds[i];
+            $('#option-' + (i + 1)).css('background-image', "url('http://i.imgur.com/" + imageId + ".png')")
+        }
+        console.log(imageIds);
     } else {
         $('#link-creator').toggle(true);
     }
 });
 
+$('#responder-form').submit(function(e) {
+    e.preventDefault();
+    var urlPrefix = document.location.origin + document.location.pathname + '?'
+    if (document.location.protocol !== 'file:') {
+        urlPrefix = urlPrefix.replace('index.html', '');
+    }
+    var queryString = $(this).serialize();
+    var url = urlPrefix + queryString;
+    url += '&a=' + getQueryVariable('a')
+
+    var urlLength = url.length;
+    var imageIds = '';
+    var foundAll = false;
+    $('#image-sorter').children().each(function(index, li) {
+        var $li = $(li);
+        if ($li.attr('id') === 'delete-line') {
+            foundAll = true;
+        } else if (foundAll) {
+            return;
+        } else {
+            console.log($li, $li.find('.image'), $li.find('.image').first(), $li.find('.image').first().data("id"))
+            var imageId = $li.find('.image').first().data("id");
+            if (imageIds) {
+                imageIds += ',' + imageId;
+            } else {
+                imageIds = imageId;
+            }
+        }
+    })
+    url += '&i=' + imageIds;
+    if (url.length > 2000) {
+        showError('Due to a browser limitation, you must shorten your bio.\nCurrent Length: ' + urlLength + '\nMax Length: 2000');
+        return;
+    }
+    console.log(url)
+})
 
 $('#link-creator-form').submit(function(e) {
     e.preventDefault();
