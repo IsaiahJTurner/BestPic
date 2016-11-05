@@ -35,8 +35,8 @@ $(document).ready(function() {
             $bioOptions.append('<li>' + bio.replace(/(?:\r\n|\r|\n)/g, '<br />') + '</li>')
         }
     }
-
-    if (albumId && !imageOrder) {
+    var hasImageOrder = ((typeof imageOrder) === 'string');
+    if (albumId && !hasImageOrder) {
         $('#responder').toggle(true);
         if (albumId.length > 10) {
             showError('Invalid album ID in url.');
@@ -60,7 +60,7 @@ $(document).ready(function() {
                     $('#image-sorter').append('<li><div class="image" data-id=' + image['id'] + ' style="background-image: url(\'' + image['link'] + '\')"></div></li>')
                 }
             })
-    } else if (imageOrder) {
+    } else if (hasImageOrder) {
         $('#response').toggle(true);
         var imageIds = imageOrder.split(',');
         for (var i = 0; i < imageIds.length; i++) {
@@ -114,7 +114,8 @@ $('#responder-form').submit(function(e) {
     }
     url += '&b=' + encodeURIComponent(bio);
     url += '&i=' + imageIds;
-    if (imageIds.split(',').length > 6) {
+    var selectedImagesLength = imageIds.split(',').length
+    if (selectedImagesLength > 6) {
         showError('Profiles can only have up to six photos, move some below the black line.');
         return;
     }
