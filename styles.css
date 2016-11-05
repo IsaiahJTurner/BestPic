@@ -103,6 +103,7 @@ label {
 }
 
 .representation {
+  border-radius: 3px;
   width: 340px;
   background-color: #f5f5f5;
   box-sizing: border-box;
